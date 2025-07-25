@@ -166,23 +166,45 @@
       border-bottom-right-radius: 10px;
     }
 
-    .plants-lover {
-      display: flex;
-      justify-content: space-between;
-      padding: 60px 40px;
-      width: 540;
-      height: 521;
-      background-color: #f5faff;
-      align-items: center;
+    .lover {
+    display: flex;
+    align-items: center; /* Aligns image and text to start at the same line */
+    padding: 50px;
+    background-color: #fff;
+    margin: 20px;
+    
+  }
+  .lover .text {
+    width: 50%;
+    margin-left: 30px; /* Gap between image and text, matching the picture */
+  }
+  .lover .text h2 {
+    color: black;
+    font-size: 2em;
+    margin-top: 0; /* Ensures text aligns with image top */
+  }
+  .lover .image {
+    width: 50%;
+    position: relative;
+  }
+  .lover .image img {
+    width: 80%;
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    .lover {
+      flex-direction: column;
     }
-
-    .plants-lover-image img {
-      width: 540px;
-      height: 597px;
-      object-fit: cover;
-      position: relative;
+    .lover .text, .lover .image {
+      width: 100%;
     }
-
+    .lover .text {
+      margin-left: 0; /* Reset margin on mobile */
+    }
+    .lover .badge {
+      display: none;
+    }
+  }
     .trusted-badge {
       position: absolute;
       top: 10px;
@@ -201,23 +223,7 @@
       justify-content: center;
     }
 
-    .plants-lover-content h2 {
-      font-size: 36px;
-      color: black;
-      margin: 0;
-    }
-
-    .plants-lover-content ul {
-      list-style: disc;
-      padding-left: 40px;
-      color: #666;
-      text-align: justify;
     
-      
-      
-      width: 50%;
-      
-    }
 
     .latest-deals {
       padding: 60px 40px;
@@ -236,7 +242,7 @@
       font-size: 16px;
       margin-top: 15px;
       max-width: 600px;
-      margin-left: auto;
+      margin-left: 30px;
       margin-right: auto;
     }
     .deals {
@@ -615,20 +621,21 @@
     </div>
   </section>
 
-  <section class="plants-lover">
-    <div class="plants-lover-image">
-      <div class="trusted-badge"></div> <!-- Placeholder for trusted badge image -->
-      <img src="/images/flower-store.png" alt="Flower Shop">
-    </div>
-    <div class="plants-lover-content">
-      <h2>Flower & Plants Lover</h2>
-      <ul>
-        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
-        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
-        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
-      </ul>
-    </div>
-  </section>
+  <div class="lover">
+  <div class="image">
+    <img src="/images/flower-store.png" alt="Plants Lover">
+    <div class="badge" style="position: absolute; z-index:1;top:10px; right: 10px; background: url('/images/trusted-badge.png') no-repeat; width: 215px; height: 215px; background-size: contain;"></div>
+  </div>
+  <div class="text">
+    <h2>Flower & Plants Lover</h2>
+    <ul>
+      <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+      <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+      <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+    </ul>
+  </div>
+  </div>
+
 
   <div class="deals">
   <h2>Latest Deals</h2>
